@@ -1,0 +1,32 @@
+<!-- 4. 비교 연산자 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var x, y, z;
+      x = 3;
+      y = 5;
+      z = '3';
+      document.write('1: ', x > y); // (1) 3 > 5 : false
+      document.write('<br>');
+      document.write('2: ', x >= y); // (2) 3 >= 5 : false
+      document.write('<br>');
+      document.write('3: ', x < y); // (3) 3 < 5 : true
+      document.write('<br>');
+      document.write('4: ', x <= y); // (4) 3 <= 5 : ture
+      document.write('<br>');
+      document.write('5: ', x == z); // (5) 3 == '3' : true  ,   =가 2개일때는, 내용(값)만 같으면 참이다.
+      document.write('<br>');
+      document.write('6: ', x != y); // (6) 3 != 5 : true   != 같지 않다.
+      document.write('<br>');
+      document.write('7: ', x === z); // (7) 3 === '3'  ,  =가 3개일때는, 내용(값)도 같아야하고 type 까지 같아야 참이다.
+      document.write('<br>');
+    </script>
+  </body>
+</html>

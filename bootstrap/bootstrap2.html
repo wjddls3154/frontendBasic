@@ -1,0 +1,45 @@
+<!-- 2. 부트스트랩 - 반응형 실습 해보기 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .b {
+        border: solid 1px black;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 알게 된 부트스트랩 정보
+    - Layout - Grid : 홈페이지 전체가 12개의 컬럼으로 구성되어있다는 것이 기본 개념.
+    - row에 12개 배정이 넘어가면, 자동으로 다음 row 에 표시가 된다.
+    - 제일 앞칸을 비우고싶으면, offset-md-4 를 주면 4개의 블록을 비우게 된다.
+    - container-fluid 하면 앞에 여백을 없애준다. 
+    -->
+    <h1>grid system</h1>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 col-sm-6 b">hello1</div>
+        <div class="col-md-3 col-sm-6 b">hello2</div>
+        <div class="col-md-3 col-sm-12 b">hello3</div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 b">hello4</div>
+        <div class="col-md-4 b">hello5</div>
+        <div class="col-md-4 b">hello6</div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 offset-md-4 b">hello7</div>
+        <div class="col-md-4 b">hello8</div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

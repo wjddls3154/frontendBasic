@@ -1,0 +1,67 @@
+<!-- 2. html 기초 문법 - 2 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <!-- 배운 것 정리
+
+1. ul,li 관련
+ul = 순서가 없는 list이다.
+- ul>li.item$*5 적고 탭 누르면, ul로 감싸진, li class="item1" 부터 ~ li class="item5" 까지가 생성된다.
+- ul 안에 li 를 생성하면, 각 줄마다 옆에 점이 찍히고, 줄 바꿀때마다 점이 찍힌다.
+
+2. ol,li 관련
+ol = 순서 있는 list이다.
+- ol로 감싸진, li 내용을 만들면, 기본값 순서인 1,2,3,4 ~ 순서로 표시되고,
+- ol type="A" 로 설정하면, 순서가 대문자 순서 A,B,C,D ~ 로 표시된다.
+- ol type="a" 로 설정하면, 순서가 소문자 순서 a,b,c,d ~ 로 표시된다.
+- ol type="I" 로 설정하면, 대문자 로마자 순서로 I,II,III,IV,V ~ 로 표시된다.
+- ol type="i" 로 설정하면, 소문자 로마자 순서로 i,ii,iii,iv,v ~ 표시된다.
+
+3. dl,dt,dd 관련
+
+- dl>dt+dd = dl 안에, dt와 dd 생성한다는 축약어이다.
+- dl : 정의 목록, dt : 정의할 용어, dd : 그 용어를 설명하는 태그 - 보통 홈페이지 하단에, 사업자 번호나 대표 정보 이런 용도로 쓰인다.
+
+4. div,span 관련
+- div 는 골격을 잡을 때 많이 사용한다.
+- div 와 span 은 꾸며줄 다른 태그가 없을 때 사용한다.
+
+-->
+
+  <body>
+    <h1>분야별 공부 분야 추천</h1>
+    <h2>Front-End</h2>
+
+    <ol type="A">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>Javascript</li>
+      <li>JQuery</li>
+      <li>Bootstrap</li>
+    </ol>
+
+    <h2>Back-End</h2>
+
+    <ul>
+      <li>Python</li>
+      <li>Django</li>
+    </ul>
+
+    <dl>
+      <dt>HTML</dt>
+      <dd>마크업 언어입니다.</dd>
+    </dl>
+
+    <div>hello</div>
+
+    <p>
+      Loren <span>ipsum</span> dolor sit amet consectetur adipiscing elit.
+      Asperiores, culpa!
+    </p>
+  </body>
+</html>

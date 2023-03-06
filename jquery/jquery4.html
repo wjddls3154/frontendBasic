@@ -1,0 +1,58 @@
+<!-- 4. jsp에서 jquery 이용 - 4 + json generator 이용 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table,
+      tr,
+      td,
+      th {
+        border: solid 1px black;
+        border-collapse: collapse;
+      }
+      th {
+        width: 15vw;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>age</th>
+          <th>eyeColor</th>
+          <th>name</th>
+          <th>gender</th>
+          <th>email</th>
+          <th>phone</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+      <tfoot></tfoot>
+    </table>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script src="user4.js" charset="utf-8"></script>
+    <script>
+      for (var i = 0; i < user.length; i++) {
+        $('tbody').append('<tr>');
+        $('tbody').append('<td>' + user[i]['_id'] + '</td>');
+        $('tbody').append('<td>' + user[i]['age'] + '</td>');
+        $('tbody').append('<td>' + user[i]['eyeColor'] + '</td>');
+        $('tbody').append('<td>' + user[i]['name'] + '</td>');
+        $('tbody').append('<td>' + user[i]['gender'] + '</td>');
+        $('tbody').append('<td>' + user[i]['email'] + '</td>');
+        $('tbody').append('<td>' + user[i]['phone'] + '</td>');
+        $('tbody').append('</tr>');
+      }
+    </script>
+  </body>
+</html>

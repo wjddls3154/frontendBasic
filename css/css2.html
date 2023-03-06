@@ -1,0 +1,43 @@
+<!-- 2. css 애니메이션 - 1 -->
+<!DOCTYPE html>
+<html lang="en">
+  <!-- 
+CSS 애니메이션
+1. keyfames 와 div 를 이용해서, 웹 페이지를 켰을 때 2초 동안 빨간 네모가 움직이는 애니메이션을 생성.
+2. div:hover 과 transition 을 1초를 줘서, 기존의 빨간 네모에 커서를 갖다대면, 1초 동안 빨간 네모에서 파란 네모로 색상이 변경되면서 크기가 커지는 애니메이션 느낌을 주었다.
+커서를 떼면, 다시 작아지면서 빨간 네모로 돌아간다.
+ -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      @keyframes 애니메이션 {
+        50% {
+          transform: translate(200px, 0);
+        }
+        100% {
+          transform: translate(200px, 200px);
+        }
+      }
+      div {
+        background: red;
+        width: 100px;
+        height: 100px;
+        animation: 애니메이션 2s;
+        transition: all 1s;
+      }
+      div:hover {
+        background: dodgerblue;
+        width: 200px;
+        height: 200px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>Hello</div>
+  </body>
+</html>

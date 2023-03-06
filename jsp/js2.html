@@ -1,0 +1,29 @@
+<!-- 2. 변수 (정수형, 문자형) -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      // 정수형 변수
+      var 변수하나 = 100; // 처음에, 변수하나를 숫자 100으로 값 지정
+      변수하나 = 150; // 그 다음, 변수하나를 숫자 150으로 값 변경
+      document.write(변수하나 + 변수하나); // 변수하나+변수하나(150+150), 둘 다 숫자형이기에 두 값을 더한 300 을 출력
+      document.write(typeof 변수하나); // 변수하나의 타입은 숫자(number) 로 출력된다.
+      document.write('<br>');
+
+      // 문자형 변수
+      var 변수둘 = '200'; // 처음에, 변수둘을 ''(따옴표) 이용해서 200이라는 문자로 지정
+      변수둘 = '250'; // 그 다음, 변수둘을 ''(따옴표) 이용해서 250이라는 문자로 변경
+      document.write(변수둘 + 변수둘); // 변수둘+변수둘(250250), 둘 다 문자형이기에 둘을 그대로 붙인 250250 으로 출력
+      document.write(typeof 변수둘); // 변수둘의 타입은 문자(string) 로 출력된다.
+      document.write('<br>');
+      document.write(변수둘[0]); // 변수둘의 값 200중, 0번째 인덱스에 해당하는 2를 출력
+    </script>
+  </body>
+</html>

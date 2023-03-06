@@ -1,0 +1,32 @@
+<!-- 15. 단일, 복수 element 반환 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="one">hi world</div>
+    <div class="one two" id="three">hi world two</div>
+    <div class="one two four">hi world three</div>
+
+    <script>
+      // 1. 단일 element 를 반환하는 함수
+      // document.getElementById('id')
+      // document.querySelector('query')
+      //
+      // 2. 복수의 element 를 반환하는 함수
+      // document.querySelectorAll('query')
+      // document.getElementByName('name')
+      k = document.getElementsByClassName('one'); // 1. 클래스네임 중 one 을 포함하는 것의 내용 모두 hi world, hi world two, hi world three 출력
+      console.log(k);
+
+      document.write(k['0']['innerHTML']); // 2. k의 0번째 인덱스의 HTML 내용인, hi world 출력
+      document.write('');
+
+      document.write(k['2']['className']); // 3. k의 2번째 인덱스의 클래스 네임인, one two four 출력
+    </script>
+  </body>
+</html>

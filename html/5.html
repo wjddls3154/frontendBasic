@@ -1,0 +1,63 @@
+<!-- 5. html 기초 문법 - 5 -->
+<!DOCTYPE html>
+<html lang="en">
+  <!-- head 안에 meta:utf-8 을 설정해두면, 한글이 안깨진다. -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <!-- 
+
+1. input 기능의 종류
+= "text" : 텍스트창.
+= "password" : 별표로 표시되는 암호창.
+= "date" : 날짜 창.
+= "time" : 시간 창.
+= "range" : 음량을 조절하는 창.
+= "color" : 색상을 선택하는 창.
+= "radio" : 라디오 버튼.
+= "checkbox" : 체크박스 버튼.
+
+2. form 태그로, input 기능들을 감싸서 사용했다.
+- form action = ""(공백)은, 나 자신에게 값을 전달한다는 이야기다.
+- method 는 get과 post 방식이 있다.
+
+3. label for = : 내가 가고자 하는 태그의 아이디를 넣어주면, 그곳으로 이동한다.
+
+4. textarea : 여러 개의 문구를 쓸수있는 창이다.
+Ex) <textarea name="" id="" cols="30" rows="10"> </textarea>
+
+-->
+
+  <body>
+    <form action="" method="get">
+      <label for="id">아이디</label>
+      <input type="text" name="아이디" id="id" /><br />
+
+      <label for="pw">패스워드</label>
+      <input type="password" name="패스워드" id="pw" /><br />
+
+      <label for="male">남</label>
+      <input type="radio" name="성별" id="male" value="남" />
+
+      <label for="female">여</label>
+      <input type="radio" name="성별" id="female" value="여" />
+
+      <p>즐겨 사용하는 프로그래밍 언어</p>
+
+      <input type="checkbox" name="언어" id="python" value="Python" />
+      <label for="python">Python</label><br />
+
+      <input type="checkbox" name="언어" id="javascript" value="Javascript" />
+      <label for="javascript">Javascript</label><br />
+
+      <input type="checkbox" name="언어" id="c" value="C" />
+      <label for="c">C</label><br />
+
+      <input type="submit" value="회원가입" />
+    </form>
+  </body>
+</html>

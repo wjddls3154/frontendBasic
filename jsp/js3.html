@@ -1,0 +1,39 @@
+<!-- 3. 사칙연산 + 나머지, 제곱,증가,증감 등과 변수 사용 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 변수와 값 선언
+      var x, y, z;
+      x = 3;
+      y = 5;
+      z = 7;
+
+      // 변수를 이용한 연산
+      document.write(x + y); // 3 + 5 = 8
+      document.write('<br>');
+      document.write(x - y); // 3 - 5 = -2
+      document.write('<br>');
+      document.write(y / x); // 5 / 3 = 1.6666666666666667
+      document.write('<br>');
+      document.write(y % x); // 5 % 3 = 2
+      document.write('<br>');
+      document.write(x * y); // 3 * 5 = 15
+      document.write('<br>');
+      document.write(x ** y); // 3의 5제곱 = 243
+      document.write('<br>');
+      x++; // x=3 를 1 증가시킨다, x = 4
+      y--; // y=5 를 1 증감시킨다, y = 4
+      x *= 3; // 4 * 3 = 12, x *= 3 은 x*3을 의미하기 때문.
+
+      document.write('x는 : ', x, '<br>y는 : ', y); // 마지막에는 결국, x = 12  y = 4 라는 값을 출력한다.
+      document.write('<br>');
+    </script>
+  </body>
+</html>

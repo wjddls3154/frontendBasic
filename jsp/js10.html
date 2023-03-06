@@ -1,0 +1,34 @@
+<!-- 10. 변수 안의 내용 출력하기 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var person = {
+        name: {
+          firstname: 'inkyo',
+          lastname: 'jung',
+        },
+        age: 25,
+        married: false,
+      };
+
+      document.write(person['name']); // 1. person 안의, name 을 출력했을 때, [object Object] 출력
+      document.write('<br>');
+
+      document.write(person['name']['firstname']); // 2. person 안의, name 안의, firstname 인 inkyo 출력
+      document.write('<br>');
+
+      document.write(person['name']['lastname']); // 3. person 안의, name 안의, lastname 인 jung 출력
+      document.write('<br>');
+
+      document.write(person['age']); // 4. person 안의 age, 25 출력
+      document.write('<br>');
+    </script>
+  </body>
+</html>

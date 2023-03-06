@@ -1,0 +1,21 @@
+<!-- 16. 버튼 눌렀을 때 변화를 주는 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="one">hello world</h1>
+    <button onclick="bu()">눌러 !!</button>
+    <script>
+      function bu() {
+        // 버튼 눌렀을 때 실행되는,
+        document.getElementById('one').innerHTML = '반갑습니다 !!'; // 출력문의 내용이 "반갑습니다 !!" 로 변경되고,
+        document.getElementById('one').style.backgroundColor = 'red'; // 배경색이 빨강색으로 변경된다.
+      }
+    </script>
+  </body>
+</html>

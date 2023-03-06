@@ -1,0 +1,26 @@
+<!-- 5. AND, OR, NOT 연산자 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 변수
+      var x, y;
+      x = true; // true = 1의 값과 같다.
+      y = false; // false = 0의 값과 같다.
+
+      // 변수 이용한 and, or, not 연산자
+      document.write('1: ', x && y); // (1) true && false = false, AND 연산자는 값이 모두 true여야 true 를 출력한다.
+      document.write('<br>');
+      document.write('2: ', x || y); // (2) true && false = true, OR 연산자는 값 중 하나만 true이면 true 를 출력한다.
+      document.write('<br>');
+      document.write('3: ', !y); // (3) !false = true, NOT 연산자는 결과 값 반대로 출력한다.
+      document.write('<br>');
+    </script>
+  </body>
+</html>

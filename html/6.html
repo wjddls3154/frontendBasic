@@ -1,0 +1,67 @@
+<!-- 6. html 기초 문법 - 6 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      table,
+      tr,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- 
+1.table>(tr>th{hello world}*3)*3 로 테이블 틀 작성해서 세부 수정
+2. table 관련
+- border-collapse의 collapse : 겹치는 선은 하나로 통일한다. 제목에 해당하는 부분은, 보통 th(중앙정렬이 되있음)를 준다.
+- table은, 구도를 잡는 용도로 사용하지 않는다. (UI만들때 사용 안한다.)
+- tr 안에 th 를 묶어 쓰거나, tr 안에 td 를 묶어 쓴다.
+- thead,tbody,tfoot 으로, tr 을 묶어 쓰기도 한다.
+- 그리고, td colspan="2" 를 주면, 가로 2칸을 차지하도록 합쳐서 사용할 수 있다.
+- 그리고, td rowspan="2" 를 주면, 세로 2칸을 차지하도록 합쳐서 사용할 수 있다.
+-->
+    <table>
+      <thead>
+        <tr>
+          <th>구분</th>
+          <th>이름</th>
+          <th>판매량</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>해리포터</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>헝거게임</td>
+          <td>200</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>반지의제왕</td>
+          <td>300</td>
+        </tr>
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <td colspan="2">총 판매량</td>
+          <td>600</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>

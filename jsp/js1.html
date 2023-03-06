@@ -1,0 +1,28 @@
+<!-- 1. 경고 알람 출력 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      p {
+        color: red;
+      }
+    </style>
+  </head>
+  <!--
+1. window.alert('hello world alert') : 'hello world alert' 라는 경고 알람을 출력한다.
+2. console.log('hello world console') : 'hello world console' 라는 내용을 콘솔에 출력한다. 
+-->
+  <body>
+    <p id="one">hello world</p>
+    <script>
+      // 3. 문서 전체에서, one 이라는 아이디를 가져올건데, 그 아이디의 내용 대신, 내가 지정한 HTML 로 출력을 하겠다는 것.
+      document.getElementById('one').innerHTML = 'replace this word';
+      document.write('hello world write'); // 4. write 를 사용한 출력방법도 존재한다.
+    </script>
+  </body>
+</html>

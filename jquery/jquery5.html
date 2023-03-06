@@ -1,0 +1,168 @@
+<!-- 5. jquery 내용 정리 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .border {
+        border: 1px solid black;
+      }
+      #box {
+        width: 100px;
+        height: 100px;
+        opacity: 0.3;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+      
+    1. jQuery
+      - 라이브러리 : 자주 사용하는 코드를 재사용 할 수 있는 형태로 가공하여 효율을 높여주는 코드
+      - jsp의 가장 유명한 라이브러리 : jQuery - 빠르고,작고, 기능이 많은 jsp 라이브러리
+    
+    2. jQuery에 대해 참고할 수 있는 사이트
+      - http://jquery.com/
+      - http://www.jqueryrain.com/
+
+    3. jQuery 사용방법 : 1.jQuery CDN, 2.다운로드
+      - 구글에 jQuery CDN 쳐서 들어가서, 코드 복사해서 body 안에 붙여주면 사용가능
+
+    4. jQuery 필터
+      - eq - equal(=)
+      - ne - not equal(<>)
+      - lt - little (<)
+      - le - little or equal (<=)
+      - gt - greater (>)
+      - ge - greater or equal (>=)
+    
+    5. 기본 필터 (index 는 음수도 허락한다.)
+      - eq(index)
+      - even - 짝수
+      - odd - 홀수
+      - first
+      - last
+      - :gt(index) - index 보다, 큰 숫자 선택
+      - :lt(index) - index 보다, 작은 숫자 선택
+      - :not(filter)
+
+    6. 속성 필터
+      - attributeContains - input[name*='man']
+      - attributeEquals - input[name*='newsletter']
+
+    7. 차일드(몇번째 자식인지) 필터
+      - :first-child, :last-child
+      - :nth-child(2)
+      - :nth-child(even), :nth-child(odd)
+      - :nth-child(3n)
+
+    8. 컨텐츠 필터
+      - :contains(text)
+      - :empty
+      - :has(selector)
+
+    9. 기타
+      - Jquery 어떻게 사용되는지 궁금하면, jquery 사이트에서 해당 기능 검색하면 코드와 예시를 볼수있다.
+      - 이벤트 : 사용자가 버튼을 클릭하거나, 마우스를 스크롤하거나, 필드의 내용을 바꾸는 등의 행동같은 것
+
+    10. jQuery 플러그인
+      - jQuery UI (progressbar, selectmenu, etc)
+      - jQuery validation (유효성 검사)
+      - jQuery lightbox (모달 창처럼 만들어줌)
+      - etc
+
+    -->
+    <h1>hello world</h1>
+    <p id="test">hello hello</p>
+    <ul>
+      <li>hello world</li>
+      <li>hello world</li>
+      <li>hello world</li>
+      <li>hello world</li>
+      <li>hello world</li>
+      <li>hello world</li>
+      <li>hello world</li>
+      <li>hello world</li>
+      <li>hello world</li>
+      <li>hello world</li>
+    </ul>
+
+    <input type="text" name="" id="userInput" />
+    <input type="text" name="" id="userInput2" />
+    <p id="userInputPrint"></p>
+    <button>눌러!</button>
+
+    <div class="wrapper">
+      <h1 class="title">TITLE</h1>
+      <ul class="items">
+        <li class="items">item 1</li>
+        <li class="items">item 2</li>
+      </ul>
+    </div>
+
+    <button type="button" id="btn_ani">클릭해주세요!</button>
+    <div id="box"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+    <script>
+      // jQuery 사용 예시 1 : jquery 필터
+      $('#test').html('<b>hello</b> world');
+      $('li').eq(2).css('color', 'blue');
+      $('li:gt(4)').css('color', 'red');
+      $('li:lt(2)').css('color', 'green');
+      $('li:nth-child(2n)').css('color', 'pink');
+
+      // jQuery 사용 예시 2 : 속성 값 변경
+      $('button').click(function () {
+        const value = $('#userInput').val();
+        $('#userInput2').val(value);
+        $('#userInputPrint').text(value);
+      });
+
+      // jQuery 사용 예시 3 : DOM 탐색
+      console.log(($('div').children()[0].innerText = 'hello world'));
+      // jQuery 사용 예시 4 : DOM 편집
+      $('div').append('append 는 div 마지막 부분에 붙는다.');
+      $('div').prepend('prepend 는 div 처음 부분에 붙는다');
+      $('ul').after('<h2>ul 태그 밑에마다 끝, ul 안 아님 !</h2>');
+      $('ul').before('<h2>ul 태그 위에마다 시작, ul 안 아님 !</h2>');
+
+      // jQuery 사용 예시 5 : class 추가, 제거
+      $('ul').addClass('border');
+
+      // jQuery 사용 예시 6 : jQuery effect(효과)
+      $('ul').fadeOut(3000).fadeIn(3000);
+
+      // jQuery 사용 예시 7 : jQuery event(행동)
+      // 클릭 이벤트 hide -  누르면 숨겨진다.
+      $('div').click(function () {
+        $(this).hide();
+      });
+      // 클릭 이벤트 animate
+      $('#btn_ani').click(function () {
+        $('#box').animate(
+          {
+            width: '300px',
+            height: '300px',
+            opacity: 1,
+          },
+          'slow'
+        );
+      });
+      // 클릭 이벤트 마우스 hover
+      $('#box').hover(
+        function () {
+          $(this).css('background-color', 'yellow');
+        },
+        function () {
+          $(this).css('background-color', 'blue');
+        }
+      );
+    </script>
+  </body>
+</html>

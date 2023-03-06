@@ -1,0 +1,95 @@
+<!-- 1. html 기초 문법 - 1 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<!-- 기능
+1. 주석키는 ctrl + / 하면 여러줄, 한줄 주석 설정 및 해제 가능, 빈 줄에 하면 주석을 생성
+2. shift + delete 누르면, 커서 해당 한줄 삭제.
+-->
+
+<!-- 기타 잘 쓰이는 태그
+1. abbr : 약어를 표현할때 사용, 해당 글자 위에 커서 올려두면 abbr title = " "에 입력한 내용이 뜬다.  Ex) <abbr title="HyperText Markup Language">HTML</abbr>
+2. kbd : 키보드 키를 나타낼때 사용  Ex) <kbd> Ctrl </kbd>
+3. pre : 있는 그대로 나타낸다.  Ex) <pre> 띄어쓰기와 줄 바꿈 등이 내가 적은 코딩 그대로 표현된다. </pre>
+4. code : 코드 블록 (컴퓨터 코드 범위를 설정)  Ex) <code> 이 부분이 코드 블록입니다 </code>
+5. cite : 저작물의 출처를 표기할때 사용(q는 인용구, cite는 인용블록)  Ex) <cite><a href="링크"></a></cite> -->
+
+<!-- 그 외 배운 것
+1. emmet 문법.
+
+2.헤딩 관련
+- h${hello world}*6 적고 탭 누르면, "hello wrold" 의 내용이 h1~h6 까지 생성된다. (h(헤딩)은 h1에서 h6 까지만 존재, 문서 내에는 h1이 하나만 있는것을 추천.)
+- h1 적고 탭 누르면, h1 생성
+- h1+p 적고 탭 누르면, h1 과 p 같이 생성
+- h1*3 적고 탭 누르면, h1이 3개가 생성
+- h$*6 적고 탭 누르면, h1~h6 까지 생성
+
+3. p태그,첨자,br,hr,lorem,주석
+- p 태그는, 문단을 나타낸다.
+- 아래 첨자 사용 : 5sub2 는, 5와 아래첨자2
+- 위 첨자 사용 : 2sup4 는, 2의 4승
+- Lorem : 의미없는 문구
+- br : 줄 바꿈, 안 닫아도 됨
+- hr 쓰면, 구분선 하나 그어진다, 안 닫아도 됨
+
+4. a (앵커) 태그
+- a href="링크" a태그는 링크를 생성해주고, 링크를 누르면 홈페이지에 연결된다.
+- a href="링크" target = "_blank" : target 옵션을 _blank 로 해주면, 새로운 창에서 홈페이지가 열린다.
+- a href="./index.html"> : ./를 해주면, 현재 폴더에 있는 어떤 파일로 이동하게 할 수 있다.
+- a href="#move" : #을 해주면, 이 페이지 내에 move 라는 ID를 가진 태그의 내용 부분으로 화면을 이동하게 된다.
+- a href="./test.png" download : download 를 이용해서, 링크를 클릭했을때, 현재 폴더에 있는 test.png 라는 파일을 다운한다. But, 그 파일이 현재 폴더에 없으면 다운로드 안된다.
+
+5. 글자 바꾸기
+- strong : 글자 굵게
+- b : 글자 굵게
+- em : 글자 옆으로 기울어지게
+- i : 글자 옆으로 기울어지게
+- mark : 형광펜 마냥 칠해짐
+
+-->
+
+
+  <h1>hello world</h1>
+	<h2>hello world</h2>
+	<h3>hello world</h3>
+	<h4>hello world</h4>
+	<h5>hello world</h5>
+	<h6>hello world</h6>
+
+	<p>hello world</p>
+	<p>H<sub>2</sub>0</p>
+	<p>x<sup>2</sup>4</p>
+	
+	<p>
+		Lorem, ipsum dolor sit amet<br>
+		 consectetur adipisicing elit.<br>
+			Repellat ad ipsa quam, dignissimos voluptas dicta excepturi maiores?<hr>
+
+<a href="http:/www.paullab.co.kr">click1</a>
+<a href="http:/www.paullab.co.kr" target="_blank">click2</a>
+<a href="./index.html">click3</a>
+<a href="#move">click4</a>
+<!-- <a href="./test.png" download>click5</a> -->
+<hr>
+
+<strong>Hello</strong> <b>it'sMe</b>
+
+<em>Good</em> <i>Moring</i> <mark>Baby</mark>
+Repellendus voluptatum quibusdam eum impedit sequi quos aspernatur, eveniet corporis mollitia molestiae in.
+	</p>
+
+	<p>
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque dolorem sed deserunt? Ea facere, vitae recusandae tempore voluptates magni nostrum explicabo voluptatibus enim numquam, nesciunt, fugiat reiciendis deleniti voluptas officiis!
+</p>
+
+	<p id ="move">
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque dolorem sed deserunt? Ea facere, vitae recusandae tempore voluptates magni nostrum explicabo voluptatibus enim numquam, nesciunt, fugiat reiciendis deleniti voluptas officiis!
+		</p>
+</body>
+</html>
